@@ -1,0 +1,344 @@
+/* Whole Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: linear-gradient(to top, #4a4a4a, #5871aa);
+}
+
+/* Navbar */
+section nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+/* Logo */
+section nav .logo {
+  font-size: 35px;
+  color: #4a4a4a;
+  cursor: pointer;
+}
+
+section nav .logo span {
+  color: #5871aa;
+  text-decoration: underline;
+}
+
+/* Navigation Links */
+section nav ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  margin-top: 10px;
+}
+
+section nav ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  transition: color 0.2s;
+}
+
+section nav ul li a:hover {
+  color: #5871aa;
+}
+
+/* Icon Container */
+section nav .icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+/* Heart and Cart Icons */
+section nav .icons .bi-heart-fill,
+section nav .icons .bi-cart-fill {
+  font-size: 30px;
+  cursor: pointer;
+  color: #4a4a4a;
+  position: relative;
+}
+
+/* Count Badges */
+#favorites-count,
+#cart-count {
+  position: absolute;
+  top: -5px;
+  right: -12px;
+  background-color: #5871aa;
+  color: white;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* Dropdown Content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  z-index: 100;
+  padding: 15px;
+  border-radius: 5px;
+  width: 300px;
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Show Dropdown on Hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Cart and Favorites Product */
+.cart-product {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cart-product img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.cart-product span {
+  flex-grow: 1;
+  font-size: 14px;
+}
+
+.cart-product .remove-favorite {
+  color: red;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Products Section */
+.products {
+  width: 100%;
+  padding: 120px 20px 50px 20px;
+  background-color: #f9f9f9;
+}
+
+.products h1 {
+  text-align: center;
+  font-size: 60px;
+  margin-bottom: 40px;
+  background: linear-gradient(to right, #4a4a4a, #5871aa);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+}
+
+.products .box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Individual Product Card */
+.products .box .card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 0 8px #5871aa;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.products .box .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(88, 113, 170, 0.3);
+}
+
+/* Small Card (Icons) */
+.products .box .card .small_card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.products .box .card:hover .small_card {
+  opacity: 1;
+}
+
+.products .box .card .small_card i {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 18px;
+  color: #999;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.products .box .card .small_card i:hover {
+  color: #5871aa;
+  background-color: #e0e0e0;
+}
+
+/* Product Image */
+.products .box .card .image img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 15px;
+  transition: transform 0.3s;
+}
+
+.products .box .card:hover .image img {
+  transform: scale(1.1);
+}
+
+/* Product Text */
+.products .box .card .products_text h2 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.products .box .card .products_text p {
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.products .box .card .products_text h3 {
+  font-size: 20px;
+  color: #5871aa;
+  margin-bottom: 10px;
+}
+
+.products .box .card .products_text .products_star {
+  color: #5871aa;
+  margin-bottom: 15px;
+}
+
+.products .box .card .products_text .btn {
+  padding: 10px 20px;
+  background: linear-gradient(to right, #4a4a4a, #5871aa);
+  color: white;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-size: 14px;
+}
+
+.products .box .card .products_text .btn:hover {
+  background: linear-gradient(to right, #5871aa, #4a4a4a);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  /* Hide Navigation Links on Smaller Screens */
+  section nav ul {
+    display: none;
+  }
+
+  /* Adjust Icon Spacing */
+  section nav .icons {
+    gap: 10px;
+  }
+
+  /* Adjust Product Grid on Medium Screens */
+  .products .box {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  /* Adjust Product Image Size */
+  .products .box .card .image img {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Adjust Logo Size on Very Small Screens */
+  section nav .logo {
+    font-size: 28px;
+  }
+
+  /* Adjust Icon Sizes */
+  section nav .icons .bi-heart-fill,
+  section nav .icons .bi-cart-fill {
+    font-size: 24px;
+  }
+
+  /* Adjust Count Badge Sizes */
+  #favorites-count,
+  #cart-count {
+    font-size: 12px;
+    padding: 1px 4px;
+  }
+
+  /* Adjust Products Heading Size */
+  .products h1 {
+    font-size: 40px;
+  }
+
+  /* Adjust Product Grid on Extra Small Screens */
+  .products .box {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  /* Adjust Product Image Size */
+  .products .box .card .image img {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* Adjust Product Title Size */
+  .products .box .card .products_text h2 {
+    font-size: 18px;
+  }
+
+  /* Adjust Product Price Size */
+  .products .box .card .products_text h3 {
+    font-size: 16px;
+  }
+
+  /* Adjust Button Size */
+  .products .box .card .products_text .btn {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+}

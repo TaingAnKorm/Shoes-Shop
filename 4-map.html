@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Logo Link -->
+    <link rel="shortcut icon" href="image/logo1.png" type="image/png" />
+    <title>Nike - Map</title>
+    <style>
+      /* Body */
+      body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        display: flex;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      /* Container to Hold Left and Right Sections */
+      .container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+      }
+
+      /* Left Section */
+      .left {
+        flex: 0.3;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        background: linear-gradient(135deg, #4a4a4a, #5871aa);
+        color: white;
+        padding: 20px;
+        padding-top: 40px;
+      }
+
+      /* Logo */
+      .logo {
+        width: 300px;
+        margin-bottom: 20px;
+      }
+
+      /* Find Store Heading */
+      .find-store {
+        font-size: 2em;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      /* Store Title */
+      .store-title {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 10px;
+      }
+
+      /* Store Details */
+      .store-details {
+        font-size: 1em;
+        text-align: left;
+        margin-left: 0;
+      }
+
+      /* Adjust Margin for Second Store */
+      .store-details.second-store {
+        margin-left: -75px;
+      }
+
+      /* Title Text */
+      .title {
+        color: black;
+        font-size: 18px;
+      }
+
+      /* Right Section */
+      .right {
+        flex: 0.7;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      /* Map Container */
+      .map {
+        flex: 1;
+        width: 100%;
+      }
+
+      /* Separator Line */
+      .separator {
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(to right, #4a4a4a, #5871aa);
+        margin: 10px 0;
+        border: none;
+      }
+
+      /* Iframe Styling for Maps */
+      .map iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Left Section Store Information -->
+      <div class="left">
+        <!-- Logo Section -->
+        <img src="image/nike.png" alt="Logo" class="logo" />
+
+        <!-- "Find Store" Heading -->
+        <div class="find-store">Find Our Partner Stores</div>
+
+        <!-- Store Title -->
+        <div class="store-title">Sportswear store in Phnom Penh</div>
+
+        <!-- First Store Details -->
+        <div class="store-details">
+          <strong><p class="title">SKOR CAMBODIA</p></strong>
+          <p>
+            <strong>• Address:</strong> 443A Preah Monivong Blvd (93), Phnom
+            Penh
+          </p>
+          <p><strong>• Hours:</strong> Closed ⋅ Opens 9 AM Everyday</p>
+        </div>
+
+        <!-- Second Store Details -->
+        <div class="store-details second-store">
+          <strong><p class="title">ID Lifestyle Aeon 3 Nike On</p></strong>
+          <p><strong>• Address:</strong> Aeon Mall Mean Chey Phnom Penh</p>
+          <p><strong>• Hours:</strong> Closed ⋅ Opens 8 AM Everyday</p>
+        </div>
+      </div>
+
+      <!-- Right Section Maps -->
+      <div class="right">
+        <!-- First Map Embed -->
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.900155509201!2d104.91672107406767!3d11.559014988641405!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310951004c54294b%3A0x728ec40f4fe09f3e!2sSKOR%20Cambodia!5e0!3m2!1sen!2skh!4v1728574109035!5m2!1sen!2skh"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+
+        <!-- Separator Line -->
+        <div class="separator"></div>
+
+        <!-- Second Map Embed -->
+        <div class="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d41535.499825990075!2d104.88927370469453!3d11.477297203588156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31095b2dcd964271%3A0x4b2f9fe32faed59c!2sID%20Lifestyle%20AEON%203%20Nike%20ON!5e0!3m2!1sen!2skh!4v1728574738616!5m2!1sen!2skh"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          >
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
